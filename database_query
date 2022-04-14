@@ -1,0 +1,11 @@
+### Melihat database dalam SQL ###
+show databases
+
+### Membuat database baru ###
+create database nama_database
+
+ ### Menghapus database ###
+ drop database nama_database
+ 
+### Memilih/menggunakan database ###
+use nama_database
