@@ -1,0 +1,30 @@
+### Membuka engine ###
+show engines;
+
+### Melihat table ###
+show tables;
+
+### Membuat tabel ###
+create table nama_tabel
+(
+	id int auto_increment,
+    firstname varchar(50),
+    lastname varchar(50),
+    salary int,
+    primary key (id)
+) engine=InnoDB;
+
+### Melihat struktur tabel ###
+describe nama_tabel;
+desc nama_tabel;
+show create table nama_tabel;
+
+### Mengubah tabel ###
+Alter table nama_tabel
+  Add column nama_kolombaru satuan(int, varchar) [+ kolom]
+  Drop column nama_kolom [hapus kolom]
+  Rename column nama_kolom to nama_kolom_baru
+  Modify nama_kolom VARCHAR(200) After nama_kolom; [mengganti letak kolom]
+  Modify nama_kolom VARCHAR(200) first; [mengganti letak kolom]
+  Modify nama_kolom VARCHAR(200); [mengganti jenis satuan data]
+  
