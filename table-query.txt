@@ -8,10 +8,10 @@ show tables;
 create table nama_tabel
 (
 	id int auto_increment,
-    firstname varchar(50),
-    lastname varchar(50),
-    salary int,
-    primary key (id)
+	firstname varchar(50),
+	lastname varchar(50),
+	salary int,
+	primary key (id)
 ) engine=InnoDB;
 
 ### Melihat struktur tabel ###
@@ -23,7 +23,7 @@ show create table nama_tabel;
 Alter table nama_tabel
   Add column nama_kolombaru satuan(int, varchar) [+ kolom]
   Drop column nama_kolom [hapus kolom]
-  Rename column nama_kolom to nama_kolom_baru
+  Rename column nama_kolom to nama_kolom_baru [mengubah nama kolom]
   Modify nama_kolom VARCHAR(200) After nama_kolom; [mengganti letak kolom]
   Modify nama_kolom VARCHAR(200) first; [mengganti letak kolom]
   Modify nama_kolom VARCHAR(200); [mengganti jenis satuan data]
@@ -34,3 +34,11 @@ Alter table nama_tabel
 ### Hapus Tabel ###
 Drop table nama_tabel [Hapus tabel]
 Truncate nama_tabel [Buat ulang isi tabel]
+
+### Insert Data ###
+insert into product01 (productname, descriptions, price) values
+('Kasur Busa', 'Kasur Busa Premium', 50000),
+('Kasur Kapuk', 'Kasur Kapuk Premium', 25000),
+('Kasur Air', 'Kasur Air Premium', 100000),
+('Kasur Udara', 'Kasur Udara Premium', 125000),
+('Kasur Lateks', 'Kasur Lateks Premium', 100000);
