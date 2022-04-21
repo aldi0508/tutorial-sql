@@ -1,0 +1,14 @@
+### Where Clause ###
+select *
+from product01
+where productname = 'kasur air'; (mencari data)
+
+### Update Data ###
+update nama_tabel
+set nama_kolom = 'data yang akan dimasukan'
+where id = 'letak data yang akan diupdate';
+
+Dengan Value (*, +, /, -)
+update nama_tabel
+set nama_kolom = nama_kolom + 10000
+where id = 'letak data yang akan diupdate';
