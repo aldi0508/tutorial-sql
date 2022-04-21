@@ -29,3 +29,8 @@ Alter table nama_tabel
   Modify nama_kolom VARCHAR(200); [mengganti jenis satuan data]
   Modify nama_kolom satuan NOT NULL [menambahkan not null dalam kolom]
   Modify nama_kolom int default 0; [default : memberi nilai pada kolom yang kosong]
+  Modify nama_kolom satuan default current_timestamp; [waktu sesuai masa sekarang {hanya bisa digunakan pada satuan 'datetime']
+  
+### Hapus Tabel ###
+Drop table nama_tabel [Hapus tabel]
+Truncate nama_tabel [Buat ulang isi tabel]
