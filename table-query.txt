@@ -27,4 +27,5 @@ Alter table nama_tabel
   Modify nama_kolom VARCHAR(200) After nama_kolom; [mengganti letak kolom]
   Modify nama_kolom VARCHAR(200) first; [mengganti letak kolom]
   Modify nama_kolom VARCHAR(200); [mengganti jenis satuan data]
-  
+  Modify nama_kolom satuan NOT NULL [menambahkan not null dalam kolom]
+  Modify nama_kolom int default 0; [default : memberi nilai pada kolom yang kosong]
