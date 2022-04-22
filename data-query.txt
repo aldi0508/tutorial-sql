@@ -1,0 +1,44 @@
+### Where Clause ###
+select *
+from product01
+  where productname = 'kasur air'; (mencari data)
+
+### Update Data ###
+update nama_tabel
+  set nama_kolom = 'data yang akan dimasukan'
+  where id = 'letak data yang akan diupdate';
+
+Dengan Value (*, +, /, -)
+update nama_tabel
+  set nama_kolom = nama_kolom + 10000
+  where id = 'letak data yang akan diupdate';
+
+Update beberapa kolom :
+update nama_tabel
+set nama_kolom = 'data yang akan dimasukan',
+  nama_kolom = 'data yang akan dimasukan'
+  where id = 'letak data yang akan diupdate';
+
+### Delete Data ###
+delete
+from nama_tabel
+where nama_kolom = 'letak data yang akan dihapus';
+
+### Alias ###
+
+### Where Operator ###
+select *
+from nama_tabel
+where price <= 5000;
+
+<, >, <> (!=), <=, >=
+and (Kedua kondisi harus benar), or (salah satu benar tidak apa-apa)
+
+### Like Operator ###
+Mencari data dalam string
+Like 'b%' (Awalan B)
+Like '%b' (Akhiran B)
+Like '%bab' (String berisi bab)
+Not Like (Tidak Like)
+is null (mencari null)
+is not null (mencari yang tidak null)
