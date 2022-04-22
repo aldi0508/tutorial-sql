@@ -40,5 +40,22 @@ Like 'b%' (Awalan B)
 Like '%b' (Akhiran B)
 Like '%bab' (String berisi bab)
 Not Like (Tidak Like)
+
+### Null Operator ###
 is null (mencari null)
 is not null (mencari yang tidak null)
+
+select * from nama_tabel
+where nama_kolom is null
+
+### Between Operator ###
+Between
+Not between
+
+select * from nama_tabel
+where price not between 100 and 10000;
+
+### in operator ###
+mencari kolom dengan beberapa nilai
+in (ada di)
+not in (tidak ada di)
