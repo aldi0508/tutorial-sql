@@ -59,3 +59,71 @@ where price not between 100 and 10000;
 mencari kolom dengan beberapa nilai
 in (ada di)
 not in (tidak ada di)
+
+### Order By Clause ###
+mengurutkan data, bisa beberapa kolom
+asc (kecil ke besar)
+desc (besar ke kecil)
+
+### Limit Clause ###
+membatasi data (hasil query) dan skip data pada hasil query (paging)
+limit 5, 7 (skip 5 data (langsung data ke 6) dan maksimal ambil 7 data)
+
+select id, category, price from products order by id limit 4, 6;
+
+### Distinct ###
+menghilangkan data duplikat (hanya menampilkan data yang unik)
+
+select distinct category from products;
+
+### Numeric Function ###
+Aritmetric Operation
+%, MOD (sisa bagi)
+* (perkalian)
++ (penjumlahan)
+- (pengurangan)
+-angka (menjadikan angka negatif) 
+/ (pembagian)
+div (pembagian tapi hasilnya dibulatkan menjadi integer)
+
+### Mathematical Function ###
+select sin(price) from products;
+select cos(price) from products;
+select tan(price) from products;
+select power(price, 2) from products; (pangkat 2)
+
+### Auto Increment ###
+membuat data primary key secara otomatis. Pada saat insert data tidak perlu mengisi kolom yang sudah di Auto Increment.
+
+Melihat ID terakhir digunakan :
+Select last_insert_id( ) 
+
+### String Function ###
+https://dev.mysql.com/doc/refman/8.0/en/string-functions.html
+lower(kolom) kecil semua
+upper(kolom) besar semua
+length(kolom) jumlah kata
+
+### Date and Time Function ###
+https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html 
+
+select id, created_at,
+	extract(year from created_at) year,
+	extract(month from created_at) month
+from products;
+
+select id, created_at,
+	year(created_at),
+	month(created_at)
+  monthname
+from products;
+
+### Flow Control Function (Case) ###
+mirip if else
+select productname, quality,
+	case quality
+    when 'Big' then 'Very Expensive'
+    when 'Medium' then 'Expensive'
+    else 'Inexpensive'
+    end as Category
+from product01;
