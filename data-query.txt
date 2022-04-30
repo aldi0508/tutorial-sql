@@ -127,3 +127,26 @@ select productname, quality,
     else 'Inexpensive'
     end as Category
 from product01;
+
+### If Function ###
+1. IF
+select id, price,
+	if(price <= 15000, 'Murah', if(price <= 20000, 'Mahal', 'Mahal Banget')) 
+from products;
+
+2. IFNULL
+select id, category, description, ifnull(description, 'Kosong') from products;
+(jika description bernilai null, maka isinya akan diganti menjadi kosong)
+
+### Agregate Function ###
+https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html
+count, max, min, avg
+
+### Grouping ###
+1. Group by
+select quality, count(quality) from product01 group by quality;
+2. Having Clause
+Filter data aggregate function (mirip where)
+select quality, count(quality) category from product01
+group by quality
+having category = 2;
