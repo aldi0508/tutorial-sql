@@ -174,3 +174,15 @@ add constraint email_unique unique (email);
 
 ### Over Partition By ###
 select *, sum(price) over(partition by id_category)  as jumlah from products;
+
+### Subquery ###
+- dapat digunakan pada fungsi Where dan From
+Penggunaan pada where :
+
+select * from products
+where price != (select avg(price) from products);
+
+Penggunaan pada from :
+
+select * from (select categories.name, products.price from categories
+join products on products.id_category = categories.id) baru;
