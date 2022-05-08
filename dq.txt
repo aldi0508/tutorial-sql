@@ -1,0 +1,50 @@
+operator OR, AND
+Select DISTINCT (mengambil data bukan duplikat (unik)
+LIMIT (membatasi data yang diambil)
+Fungsi dalam SQL :
+
+======= FUNGSI SKALAR =======
+yang sering digunakan :
+1. ABS (agar nilainya absolut (menjadi positif semua))
+2. CEILING (dibulatkan nilai diatasnya paling dekat (contoh : 93,2 menjadi 94)
+3. FLOOR (dibulatkan nilai dibawahnya paling dekat (contoh : 93,7 menjadi 93)
+4. ROUND (membulatkan angka dengan benar (contoh : round (semester1, 2) nah angka koma ini menunjukan berapa angka dibelakang koma (dari contoh diatas berarti nilai semester1 memiliki dua angka dibelakang koma) jika koma 0 maka tidak ada angka dibelakang koma (dibulatkan seutuhnya) 
+5. SQRT (mengetahui akar kuadrat dari suatu nilai (sqrt (81) = 9)
+6. MOD (menghitung sisa dari pembagian (contoh mod(15,2) arti dari rumus ini yaitu 15 dibagi 2 dan dan sisa dari perhitungan tersebut yaitu  1)
+7. EXP (Menghitung nilai eksponensial e dipangkatkan suatu bilangan, dimana e adalah bilangan dasar logaritma yaitu 2.7182818245 (EXP(2) = 7.389056)
+Contoh penggunaan :
+select StudentID, FirstName, LastName, Semester1, Semester2, abs(MarkGrowth) as MarkGrowth from students;
+
+======= FUNGSI SKALAR TEXT =======
+yang sering digunakan :
+ 1. CONCAT (menggabungkan teks)
+ 2. SUBSTRING INDEX (memotong teks. contoh :
+- mysql> SELECT SUBSTRING_INDEX('www.dumetschool.com', '.', 2);
+Hasil: 'www.dumetschool'
+- mysql> SELECT SUBSTRING_INDEX('www.dumetschool.com', '.', -1);
+Hasil: 'com'
+Perhatikan tanda bacanya! disini memakai tanda baca "." ada yang "@" juga ges
+3. SUBSTR (memotong kalimat)
+mysql> SELECT SUBSTR('Dumetschool.com', 1, 5);
+Hasil: 'Dumet'
+mysql> SELECT SUBSTR('Dumetschool.com', -3, 3);
+Hasil: 'com'
+*menunjukan dimulai dari huruf pertama, lima huruf
+4. LENGTH (menghitung jumlah huruf)
+5. REPLACE (mengganti huruf dalam text)
+SELECT REPLACE(ColumnName, Character/String to be change, New String/Character)
+FROM TableName; 
+6. UPPER (semua kapital)
+7. LOWER (semua huruf kecil)
+
+======= FUNGSI AGREGAT + WHERE =======
+Fungsi Agregat :
+1. Sum (Menjumlahkan Nilai)
+2. Count (Menghitung jumlah baris)
+3. AVG (menghitung rata-rata)
+4. Max dan Min (Mencari nilai terbesar dan terkecil)
+
+CASE STATEMENT
+IN
+JOIN, UNION
+HAVING CLAUSE
